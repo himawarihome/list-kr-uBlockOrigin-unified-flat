@@ -29,9 +29,11 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
     flattened_filter = header + '\n'
 
     for sub_filter in sub_filters:
-        with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/' + sub_filter) as response:
+        #with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/' + sub_filter) as response:
+        with urllib.request.urlopen('https://cdn.jsdelivr.net/gh/List-KR/List-KR@latest/' + sub_filter) as response:
             sub_filter_content = response.read().decode('utf-8')
             flattened_filter += '!\n! Filter: ' + sub_filter + '\n!\n' + sub_filter_content + '\n'
 
-    with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
+    #with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
+    with open('./dist/list-kr-uBlockOrigin-unified-flat.txt', 'w', encoding="UTF-8") as f:
        f.write(flattened_filter)
