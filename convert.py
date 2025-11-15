@@ -5,7 +5,8 @@ import urllib.request
 import datetime
 import os
 
-uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filter-uBlockOrigin.txt'
+#uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filter-uBlockOrigin.txt'
+uBO_filter_URL = 'https://cdn.jsdelivr.net/gh/List-KR/List-KR@latest/filter-uBlockOrigin-unified.txt'
 
 print("Filter update triggered at " + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
