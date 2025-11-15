@@ -11,7 +11,7 @@ Brave Browser와 같은 `!#include` 구문을 지원하지 않는 Ad-Blocker에 
 
 다음 URL을 사용하시는 Ad-Blocker에 추가하세요.
 ```
-https://raw.githubusercontent.com/HelloKS/list-kr-flat/latest/list-kr-flat.txt
+https://raw.githubusercontent.com/himawarihome/list-kr-flat/latest/list-kr-uBlockOrigin-unified-flat.txt
 ```
 
 ## 관련 Issue
