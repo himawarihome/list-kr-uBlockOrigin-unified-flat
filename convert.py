@@ -33,5 +33,5 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
             sub_filter_content = response.read().decode('utf-8')
             flattened_filter += '!\n! Filter: ' + sub_filter + '\n!\n' + sub_filter_content + '\n'
 
-    with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
+    with open('./dist/list-kr-unified-flat.txt', 'w', encoding="UTF-8") as f:
        f.write(flattened_filter)
