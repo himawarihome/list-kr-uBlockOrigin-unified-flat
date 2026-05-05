@@ -5,8 +5,8 @@ import urllib.request
 import datetime
 import os
 
-#uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filter-uBlockOrigin.txt'
-uBO_filter_URL = 'https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt'
+#uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filterslists/filterslist-uBlockOrigin.txt'
+uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filterslists/filterslist-uBlockOrigin-unified.txt'
 
 print("Filter update triggered at " + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
@@ -29,11 +29,9 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
     flattened_filter = header + '\n'
 
     for sub_filter in sub_filters:
-        #with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/' + sub_filter) as response:
-        with urllib.request.urlopen('https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/' + sub_filter) as response:
+        with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/filterslists/' + sub_filter) as response:
             sub_filter_content = response.read().decode('utf-8')
             flattened_filter += '!\n! Filter: ' + sub_filter + '\n!\n' + sub_filter_content + '\n'
 
-    #with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
-    with open('./dist/list-kr-uBlockOrigin-unified-flat.txt', 'w', encoding="UTF-8") as f:
+    with open('./dist/list-kr-flat.txt', 'w', encoding="UTF-8") as f:
        f.write(flattened_filter)
