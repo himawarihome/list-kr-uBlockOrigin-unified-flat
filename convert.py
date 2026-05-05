@@ -6,7 +6,7 @@ import datetime
 import os
 
 #uBO_filter_URL = 'https://raw.githubusercontent.com/List-KR/List-KR/master/filter-uBlockOrigin.txt'
-uBO_filter_URL = 'https://cdn.jsdelivr.net/gh/List-KR/List-KR@latest/filter-uBlockOrigin-unified.txt'
+uBO_filter_URL = 'https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt'
 
 print("Filter update triggered at " + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
@@ -30,7 +30,7 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
 
     for sub_filter in sub_filters:
         #with urllib.request.urlopen('https://raw.githubusercontent.com/List-KR/List-KR/master/' + sub_filter) as response:
-        with urllib.request.urlopen('https://cdn.jsdelivr.net/gh/List-KR/List-KR@latest/' + sub_filter) as response:
+        with urllib.request.urlopen('https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/' + sub_filter) as response:
             sub_filter_content = response.read().decode('utf-8')
             flattened_filter += '!\n! Filter: ' + sub_filter + '\n!\n' + sub_filter_content + '\n'
 
