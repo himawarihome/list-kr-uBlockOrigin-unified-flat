@@ -16,10 +16,10 @@ jobs:
     steps:
 
     - name: Download script repo
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
 
     - name: Download release repo
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
       with:
         ref: 'latest'
         path: './dist'
