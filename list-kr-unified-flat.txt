@@ -1,11 +1,3 @@
-! Title: List-KR for uBlock Origin
-! Description: List-KR for uBlock Origin. Maintained by the adblock community and AdGuard.
-! Version: 2026.0326.1
-! Expires: 12 hours
-! Homepage: https://github.com/List-KR/List-KR
-! Support: https://list-kr-community.pages.dev/docs/
-! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
-! Version must be UTC format.
 
 !
 ! Filter: adblocking/filters-share/3rd_domains.txt
