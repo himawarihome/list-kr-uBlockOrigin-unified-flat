@@ -22,6 +22,7 @@ with urllib.request.urlopen(uBO_filter_URL) as response:
             sub_filters.append(line.split(" ")[1])
         elif line.startswith('! '):
             header += line + '\n'
+            print(line + '\n')
             if "Version: " in line:
                 with open('./dist/README.md', 'w', encoding="UTF-8") as f:
                     f.write(line.replace("! Version: ", ""))
